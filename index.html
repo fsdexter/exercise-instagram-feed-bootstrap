@@ -1,0 +1,356 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo+Script">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Bootstrap Instagram Photo Feed</title>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-light bg-light p-1">
+
+        <a class="navbar-brand" href="#">
+            <i class="fab fa-instagram"></i>
+            <span>Finsata</span>
+        </a><!-- navbar brand -->
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item align-self-center">
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    Create new post
+                </button>
+            </li><!-- trigger modal button -->
+            <li class="nav-item">
+                <button type="button" class="btn btn-lg btn-link px-2" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i><i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item text-right" href="#">Action</a>
+                    <a class="dropdown-item text-right" href="#">Another Action</a>
+                    <a class="dropdown-item text-right" data-toggle="modal" data-target="#exampleModal">Modal Form</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="#">Log Out</a>
+                </div>
+            </li><!-- gear button -->
+        </ul><!-- navbar buttons -->
+
+    </nav><!-- navbar fixed -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </div><!-- modal body -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Publish</button>
+                </div><!-- modal footer -->
+            </div><!-- modal body -->
+        </div><!-- modal dialog -->
+    </div><!-- modal container -->
+
+    <div class="container-fluid">
+        <div class="row mt-2" id="top-row"><br><br></div>
+        <div class="row p-2 mb-3" id="nav-pills">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="true"><i class="fas fa-th"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true"><i class="fas fa-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- navpills -->
+
+
+        <div class="row m-0 p-0">
+            <div class="col-12 p-0 m-0">
+                <div class="d-flex justify-content-center ">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fas fa-th my-auto d-block"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <i class="fas fa-bars my-auto d-block"></i>
+                            </a>
+                    </ul>
+                </div>
+            </div>
+
+          <div class="container">      
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <div class="container d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://i.pinimg.com/originals/9a/2a/2a/9a2a2a2f4bfb18ae9d2a71486158bcdf.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://ih1.redbubble.net/image.1284929056.0771/raf,750x1000,075,t,101010:01c5ca27c6.u2.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://i.gifer.com/2Oo7.gif"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://i.pinimg.com/originals/bd/44/44/bd4444ed41909d250de152efaf57f876.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://i.pinimg.com/originals/6f/f0/25/6ff02515f5e0428b9e0a72605e320549.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://proassets.monopile.cloud/24409/3153295e08.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="http://2.bp.blogspot.com/-9m6VktR0HvA/UsCUe7-x3lI/AAAAAAAACl0/cJ_t0-01-Oc/s1600/Pizza+gram.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://thumbs.dreamstime.com/b/pizzamonster-mit-einem-einzelnen-auge-107823402.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                                <div class="card shadow-sm myCard"> <img
+                                        src="https://i.pinimg.com/originals/f9/2e/a2/f92ea2e5b3007bcad74b3f3f330b3b3d.jpg"
+                                        alt="first photo" class="w-100 h-100 myImg"> </div>
+                            </div>
+                        </div>
+                    </div>        
+                            
+          </div>                
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" style="background-color: gray;">
+                            <div class="container"
+                                style="text-align: center; border: none; margin: 25px; background-color: white; ">
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://i.pinimg.com/originals/9a/2a/2a/9a2a2a2f4bfb18ae9d2a71486158bcdf.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://ih1.redbubble.net/image.1284929056.0771/raf,750x1000,075,t,101010:01c5ca27c6.u2.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://i.gifer.com/2Oo7.gif" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://i.pinimg.com/originals/bd/44/44/bd4444ed41909d250de152efaf57f876.jpg" width="450px" />
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://i.pinimg.com/originals/6f/f0/25/6ff02515f5e0428b9e0a72605e320549.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://proassets.monopile.cloud/24409/3153295e08.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="http://2.bp.blogspot.com/-9m6VktR0HvA/UsCUe7-x3lI/AAAAAAAACl0/cJ_t0-01-Oc/s1600/Pizza+gram.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://thumbs.dreamstime.com/b/pizzamonster-mit-einem-einzelnen-auge-107823402.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post" style="margin: 20px;">
+                                    <div class="post-header" style="text-align: left;">
+                                        <div>
+                                            <h2>Lorem, ipsum dolor.</h2>
+                                        </div>
+                                        <div>
+                                            <span>may 27</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://i.pinimg.com/originals/f9/2e/a2/f92ea2e5b3007bcad74b3f3f330b3b3d.jpg" width="450px">
+                                    </div>
+                                    <div>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex debitis
+                                            velit doloremque quidem tenetur suscipit temporibus. Qui corrupti quae
+                                            temporibus officia.
+                                        </p>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                        crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                        crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
